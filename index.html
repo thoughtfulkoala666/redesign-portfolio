@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-neutral-50">
+    <head>
+        <title>Koala's Responsive Redesign Project</title>
+        <!-- import javascript variables and functions -->
+        <script src="app.js" defer></script>
+        <!-- import CSS styles -->
+        <!-- <link rel="stylesheet" href="styles.css" />  -->
+        <!-- STENCIL "STARTER" CODE WAS COPIED FROM THE WEBDEV 3 LAB, AND COMPLETELY MODIFIED. SOME REMNANTS *MIGHT* STILL BE HERE BUT PROBABLY NOT -->
+        <!-- import tailwind for stying -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <!-- GENERAL LAYOUT/STYLING TAKEN FROM MY PERSONAS PROJECT -->
+    <!-- page content goes into <body> -->
+    <body>
+        <div id="koalaproject">
+            <div
+                id="main"
+                class="flex flex-col items-center text-neutral-800 min-h-screen"
+            >
+                <div
+                    id="name"
+                    class="h-20 border-b-2 w-full font-bold text-2xl font-mono flex items-center justify-center"
+                >
+                    <p
+                        class="font-bold text-3xl text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-600"
+                    >
+                        thoughtfulkoala666
+                    </p>
+                </div>
+                <div id="hero" class="flex justify-center flex-col">
+                    <h1
+                        class="font-bold text-4xl md:text-6xl xl:text-8xl pt-6 text-center"
+                    >
+                        Responsive Redesign
+                    </h1>
+
+                    <h4 class="text-2xl text-center font-semibold pt-4">
+                        Redesigning a Webpage Based on Usability and Accessibility Standards
+                    </h4>
+                </div>
+                <div class="p-6"></div>
+                <p class="text-xl pb-6 w-1/2 text-center">I chose to re-design the website of a dive center I worked at over the summer, in hopes that they could use my re-design to improve users' experience on their site.</p>
+                <p class="text-xl w-1/2 text-center">Click <a class="text-blue-600 text-xl underline" href="https://www.tarpoonlagoon.com/">here</a> to visit the original site the re-design was based off of:</p>
+                <div class="p-2"></div>
+                <img src="./site-screenshot.png" class="w-1/2 shadow-xl">
+                <p class="text-neutral-400 pt-4 text-lg w-3/4 text-center">Tarpoon Lagoon Dive Center is a SCUBA shop based in Miami Beach, FL.</p>
+                <div class="p-10"></div>
+
+                <h2 class="text-6xl font-bold text-center" id="observations-and-interviews">Usability Problems</h2>
+                <div id="problemlist" class="text-2xl w-full flex flex-col justify-center items-center text-center">
+                  <div class="p-2"></div>
+                  <h2 class="m-auto w-3/4 text-center">
+                    In order to motivate the re-design of the website, the original website was evaluated for usability and accessibility problems.
+                  </h2>
+                  <div class="p-2"></div>
+                  <h2 class="m-auto text-lg w-3/4 text-center">
+                    In order to evaluate for usability and accessibility, it is important to outline the <span class="italic">purpose</span> of the site itself.
+                    This site is actually complex in that it serves four main purposes targeting audiences with different needs and experiences. Users of the site use the site for:
+                  </h2>
+                  <div class="p-1"></div>
+                  <ul class="list-decimal text-lg flex flex-col text-center italic">
+                    <li>Booking SCUBA Trips</li>
+                    <li>Enrolling in SCUBA Courses</li>
+                    <li>Buying SCUBA Gear</li>
+                    <li>Referencing important links</li>
+
+                  </ul>
+                  <div class="p-6"></div>
+                  <h2 class="m-auto w-3/4 text-center">
+                    The following are the core problems that were identified in the context of the purpose of the site:
+                  </h2>
+                  
+                  <div class="p-2"></div>
+                  
+                  <div class="p-3"></div>
+                  <!-- Problem Section-->
+                  <div class="flex flex-row w-5/6 p-2 bg-neutral-200 rounded-lg justify-center items-center shadow-xl">
+                    <div class="flex flex-col justify-center items-center">
+                      <h4 class="text-4xl font-bold ">Confusing Navigation</h4>
+                      <div class="p-1"></div>
+                      <p class="p-2 px-6">The main navigation bar contains options of different types, some being dropdowns revealed on hover, and others being plain text. There is no visual indication that an option contains more information, obscuring important navigational features. 
+                        Additionally, for some dropdown options, the navigation is unintuitive (some items seem to be in the wrong section).</p>
+                    </div>
+                    <img class="w-1/2"src="./problem-navigation.png">
+                  </div>
+                  <!-- Problem Section End -->
+                  <div class="p-3"></div>
+                  <!-- Problem Section-->
+                  <div class="flex flex-row w-5/6 p-2 bg-neutral-200 rounded-lg justify-center items-center shadow-xl">
+                    <img class="w-1/2 "src="./problem-misleading.png">
+                    <div class="flex flex-col justify-center items-center">
+                      <h4 class="text-4xl font-bold">Misleading Naming</h4>
+                      <div class="p-1"></div>
+                      <p class="p-2 px-6">One of the core functions of the site is to allow users to book/reserve a dive, but there is no obvious place to do that on that nav bar. Users have to know beforehand that the calendar is interactable and is the only way to reserve a dive. All other "Call to Action"s are obfuscated (more on that later...)</p>
+                    </div>
+                    
+                  </div>
+                  <!-- Problem Section End -->
+
+                  <div class="p-3"></div>
+                  <!-- Problem Section-->
+                  <div class="flex flex-row w-5/6 p-2 bg-neutral-200 rounded-lg justify-center items-center shadow-xl">
+                    <div class="flex flex-col justify-center items-center">
+                      <h4 class="text-4xl font-bold ">Lack of Hierarchy (Buttons)</h4>
+                      <div class="p-1"></div>
+                      <p>All "Call to Action" buttons are overlayed on images, and it is very unclear that the text is actually a button to be used for navigation. Additionally, there is no clear distinction between the buttons used for different tasks on the site (gear-shop, book dive, reserve course, utility link)</p>
+                    </div>
+                    <img class="w-1/2 "src="./problem-embedded.png">
+                  </div>
+                  <!-- Problem Section End -->
+                  <div class="p-3"></div>
+                  <!-- Problem Section-->
+                  <div class="flex flex-row w-5/6 p-2 bg-neutral-200 rounded-lg justify-center items-center shadow-xl">
+                    <img class="w-1/2 "src="./problem-button.png">
+                    <div class="flex flex-col justify-center items-center">
+                      <h4 class="text-4xl font-bold ">Lack of Hierarchy (Buttons) cont.</h4>
+                      <div class="p-1"></div>
+                      <p>Some buttons, instead of being placed over images, are placed relative to other non-button elements which make them both difficult to locate, and to identify as a button.</p>
+                    </div>
+                    
+                  </div>
+                  <!-- Problem Section End -->
+                  <div class="p-3"></div>
+                  <!-- Problem Section-->
+                  <div class="flex flex-row w-5/6 p-2 bg-neutral-200 rounded-lg justify-center items-center shadow-xl">
+                    <div class="flex flex-col justify-center items-center">
+                      <h4 class="text-4xl font-bold ">Lack of Hierarchy (Buttons) cont.</h4>
+                      <div class="p-1"></div>
+                      <p>Some navigational buttons are implemented as text, entirely inconsistent with the existing standard of using buttons for "Call to Action" purposes. They are usually embedded in long paragraphs of text, which makes them inexcusably difficult to notice/locate for supplying such fundamental functionality to the site.</p>
+                    </div>
+                    <img class="w-1/2 "src="./problem-shop.png">
+                  </div>
+                  <!-- Problem Section End -->
+                
+                  <div class="p-3"></div>
+                  <!-- Problem Section-->
+                  <div class="flex flex-row w-5/6 p-2 bg-neutral-200 rounded-lg justify-center items-center shadow-xl">
+                    <div class="flex w-1/2 bg-red-500">
+                      <img class="w-1/2"src="./problem-mobile-1.png">
+                      <img class="w-1/2"src="./problem-mobile-2.png">
+                    </div>
+                    <div class="flex flex-col justify-center items-center w-1/2">
+                      <h4 class="text-4xl font-bold">Minimal Mobile Support</h4>
+                      <div class="p-1"></div>
+                      <p>The mobile version of the site contains a lot of overlapping and spacing issues, poorly applying mobile support techniques without properly considering mobile constraints/layouts.</p>
+                    </div>
+                    
+                  </div>
+                  <!-- Problem Section End -->
+                  <div class="p-3"></div>
+                  <!-- Problem Section-->
+                  <div class="flex flex-row w-5/6 p-2 bg-neutral-200 rounded-lg justify-center items-center shadow-xl">`
+                    <div class="flex flex-col justify-center items-center">
+                      <h4 class="text-4xl font-bold">Inconsistent Typography</h4>
+                      <div class="p-1"></div>
+                      <p>There are at least 6 different fonts used on the front page which are not only visually unappealing, but further confuse text categorization and hierarchy.</p>
+                    </div>
+                    <img class="w-1/2"src="./site-screenshot.png">
+                  </div>
+                  <!-- Problem Section End -->
+                  
+                  <div class="p-3"></div>
+                  <!-- Problem Section-->
+                  <div class="flex flex-row w-5/6 p-2 bg-neutral-200 rounded-lg justify-center items-center shadow-xl">
+                    <div class="flex flex-col justify-center items-center">
+                      <h4 class="text-4xl font-bold">Unintuitive Organization</h4>
+                      <div class="p-1"></div>
+                      <p>All of the above problems, combined with general layout decisions make it very difficult for any users in one of the four audiences to figure out which parts of the site they should be using and how. There are also organizational problems within sections targeted toward user-groups, for example: divers are not offered any clues as how to find courses that match their skill level (very advanced courses listed next to very basic courses).</p>
+                    </div>
+                    <!-- <img class="w-1/2 "src="./problem-shop.png"> -->
+                  </div>
+                  <!-- Problem Section End -->
+                </div>
+                <div class="p-6"></div>
+
+                <h4 class="text-2xl w-3/4 font-bold text-center">In addition to identifying usability problems manually, the website was also run through the WebAIM WAVE tool to assess potential accessibility problems:</h4>
+                <img src="./webaim.png" class="w-2/6">
+                <p class="w-3/4 text-xl text-center">All low-contrast errors that were reported were examined and determined to be a case of poor CSS styling- as the background was detected as "white" where practically the background is a much darker and high-contrast color.
+                  The alerts primarily concerned the tag-type of the navigation bar, as they are implemented as headers and not as less significant elements/buttons. This is a case of poor HTML semantics, and while it isn't ideal and slightly inhibits accessibility, the overall accessibility of the site is not greatly impacted.
+                  In summary, the current accessibility of the site from an aria/wave-based standpoint is very good, with only a few minor issues that are easily fixable. The main issues lie within the greater usability of the site.</p>
+                </p>
+
+                <div class="p-10"></div>
+
+                <h2 class="text-6xl font-bold text-center" id="observations-and-interviews">Lo-Fi Prototype</h2>
+                <div class="p-2"></div>
+                <p class="text-2xl w-3/4 text-center">After identifying the usability problems with the website, a series of Low Fidelity (Lo-Fi) prototypes was created, each representing a common type of device a user would interact with the website on. Each design is annotated and describes how each design choice was influenced by one of the usability problems that was addressed. Each successive design incorporates the feedback from the previous device platform, but only shows new information with respect to the device platform to avoid redundancy and clutter. </p>
+                <div class="p-2"></div>
+                <iframe src="./lo-fi-prototype.pdf" class="w-5/6 h-[48rem]"></iframe>
+
+                <div class="p-10"></div>
+
+                <h2 class="text-6xl font-bold text-center" id="observations-and-interviews">Visual Design Style Guide</h2>
+                <div class="p-2"></div>
+                <p class="text-2xl w-3/4 text-center">Before transforming the Lo-Fi prototypes into high fidelity (Hi-Fi) prototypes, a visual style guide was created in order to make design work more consistent within each device design, and among device designs.</p>
+                <div class="p-2"></div>
+                <iframe src="./Style-Guide.pdf" class="w-5/6 h-[24rem]"></iframe>
+
+                <div class="p-10"></div>
+
+                <h2 class="text-6xl font-bold text-center" id="observations-and-interviews">Hi-Fi Prototype</h2>
+                <div class="p-2"></div>
+                <p class="text-2xl w-3/4 text-center">Using the Visual Design Style Guide, the following Hi-Fi prototypes were constructed: </p>
+                <div class="p-2"></div>
+                <iframe src="./Annotated Hi-Fi.pdf" class="w-5/6 h-[48rem]"></iframe>
+
+                <div class="p-10"></div>
+
+                <h2 class="text-6xl font-bold text-center" id="observations-and-interviews">Responsive Website</h2>
+                <div class="p-2"></div>
+                <p class="text-2xl w-3/4 text-center">Using the Hi-Fi prototypes, the following responsive website was constructed: </p>
+                <div class="p-2"></div>
+                <p class="text-2xl  text-center w-3/4"><a class="text-blue-500 italic" href="https://thoughtfulkoala666.github.io/redesigned-site/">Click here to visit the website</a>, or view the website in the window below:</p>
+                <div class="p-2"></div>
+                <h4 class="text-xl text-center font-bold pt-4 pb-2">A few notes:</h4>
+                <ol class="list-decimal w-2/6 text-center text-lg">
+                  <li>Not all links are functional for demo-purposes.</li>
+                  <li>NOTE 2: The menus (dropdown and main nav bar) are automatically expanded/frozen to demonstrate the most informative state, as to avoid heavy JS usage in the demo.</li>
+                  <li>If you resize this portfolio page, you can see the responsive elements of the website too!</li>
+                </ol>
+                <!-- <p class="w-3/4 text-center">Not all links are functional for demo-purposes. NOTE 2: The menus (dropdown and main nav bar) are automatically expanded/frozen to demonstrate the most informative state, as to avoid heavy JS usage in the demo. NOTE 3: By the way, if you resize this portfolio page, you can see the responsive elements of the website too!</p> -->
+                <div class="p-2"></div>
+                <iframe src="./inner-site-test/index.html" class="w-5/6 h-[48rem]"></iframe>
+                
+<!-- TEMP: -->
+      
+
+                
+                
+                
+                
+
+                <div class="p-16"></div>
+                
+            </div>
+        </div>
+    </body>
+</html>
